@@ -3,7 +3,7 @@ import routes from './routes';
 
 const server = express();
 
-server.get('/', (request, response) => response.json({ message: 'Hello world!' }));
+server.use(routes);
 
 server.listen(3333, () => {
   console.log('Server running on 3333');
