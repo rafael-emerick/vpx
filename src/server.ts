@@ -1,11 +1,10 @@
-import express, { request, response } from 'express';
+import express from 'express';
+import routes from './routes';
 
-const server = express()
+const server = express();
 
-server.get('/', (request, response) =>{
-    return response.json({ message: 'Hello world!'})
-})
+server.get('/', (request, response) => response.json({ message: 'Hello world!' }));
 
 server.listen(3333, () => {
-    console.log('Server running on 3333')
-})
+  console.log('Server running on 3333');
+});
